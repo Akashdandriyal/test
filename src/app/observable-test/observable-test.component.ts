@@ -20,11 +20,6 @@ export class ObservableTestComponent {
       setTimeout(() => observer.complete(), 5000);
     });
 
-    this.data.subscribe({
-      next: value => this.myArray.push(value),
-    error: error => this.error = true,
-    complete: () => this.finished = true
-    }
-    );
+    
   }
 }
