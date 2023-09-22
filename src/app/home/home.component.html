@@ -1,0 +1,27 @@
+<h1>{{'10' | currency:'INR':false:'5.2-7'}}</h1>
+
+<ng-template appRepeat #rt="repeat" #ct="changeText">
+    <p>Testing custom directives</p>
+</ng-template>
+
+<table border="1">
+    <tr>
+        <td [attr.colspan]="4">first</td>
+        <td>second</td>
+    </tr>
+    <tr>
+        <td>third</td>
+        <td>fourth</td>
+        <td>fifth</td>
+    </tr>
+</table>
+
+<button (click)="rt.repeatElement(5)">Repeat</button>
+<button (click)="ct.changeText()">Change text</button>
+
+<br>
+<br>
+
+<app-course-list (onRegister)="registerCourse($event)"></app-course-list>
+<br>
+<p *ngIf="registeredCourse">{{registeredCourse}}</p>
